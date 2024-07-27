@@ -63,7 +63,8 @@ class LanguageWidget extends StatelessWidget {
                         target: LinkTarget.blank,
                         uri: Uri.parse('https://www.google.co.uk/'),
                         builder: (context, followLink) => GestureDetector(
-                          child:  Text('Or ride with Pickme',
+                          onTap: followLink,
+                          child: const Text('Or ride with Pickme',
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
                                   decorationColor: Colors.blue,
@@ -71,7 +72,6 @@ class LanguageWidget extends StatelessWidget {
                                   fontStyle: FontStyle.normal,
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500)),
-                          onTap: followLink,
                         ),
                       ),
                     )

@@ -3,7 +3,9 @@ import 'package:hire_share/language.dart';
 
 import 'Login.dart';
 import 'create_account.dart';
+import 'documents.dart';
 import 'mobile_number_verification.dart';
+import 'personal_info.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MobileNumberVerificationScreen(),
+      home: PersonalInformationScreen(),
     );
   }
 }

@@ -7,6 +7,6 @@ class MobileNumberVerificationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MobileNumberVerificationWidget();
+    return MobileNumberVerificationWidget(mobileNo: '07788848321',);
   }
 }

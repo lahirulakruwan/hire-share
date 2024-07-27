@@ -3,8 +3,9 @@ import 'package:percent_indicator/percent_indicator.dart';
 
 class OnBoardingProgressBarWidget extends StatefulWidget {
   final double fill_percentage;
+  final String text;
 
-  const OnBoardingProgressBarWidget({required this.fill_percentage});
+  OnBoardingProgressBarWidget({required this.fill_percentage,required this.text});
 
   @override
   State<OnBoardingProgressBarWidget> createState() =>
@@ -17,17 +18,17 @@ class _OnBoardingProgressBarWidgetState
   Widget build(BuildContext context) {
     return SizedBox(
       width: 400,
-      height: 110,
+      height: 80,
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Column(
             children: [
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
+                 const Text(
                     'YOUR PROGRESS',
                     style: TextStyle(
                         fontStyle: FontStyle.normal,
@@ -35,10 +36,10 @@ class _OnBoardingProgressBarWidgetState
                         fontWeight: FontWeight.w400),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 150.0),
+                    padding:const EdgeInsets.only(left: 150.0),
                     child: Text(
-                      'Getting Started!',
-                      style: TextStyle(
+                      widget.text,
+                      style: const TextStyle(
                           color: Colors.green,
                           fontStyle: FontStyle.normal,
                           fontSize: 12,
