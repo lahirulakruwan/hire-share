@@ -37,6 +37,10 @@ class _PersonalInfoWidgetState extends State<PersonalInfoWidget> {
     _last_name_controller.dispose();
     _date_of_birth_controller.dispose();
     _nic_controller.dispose();
+    _secondary_mobile_number_controller.dispose();
+    _email_address_controller.dispose();
+    _adddress_line_1_controller.dispose();
+    _adddress_line_2_controller.dispose();
     super.dispose();
   }
 
@@ -185,7 +189,7 @@ class _PersonalInfoWidgetState extends State<PersonalInfoWidget> {
                             height: 70,
                             child: TextFormField(
                               maxLength: 20,
-                              keyboardType: TextInputType.name,
+                              keyboardType: TextInputType.datetime,
                               controller: _date_of_birth_controller,
                               decoration: InputDecoration(
                                   suffixIcon: IconButton(
