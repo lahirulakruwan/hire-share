@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hire_share/document_summary.dart';
+import 'package:hire_share/final_step.dart';
 import 'package:hire_share/language.dart';
 import 'package:hire_share/vehicle_details.dart';
 import 'package:hire_share/vehicle_documents.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: VehicleDocumentsScreen(),
+      home: FinalStepScreen(),
     );
   }
 }
